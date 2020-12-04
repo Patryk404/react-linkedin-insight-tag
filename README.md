@@ -6,8 +6,8 @@ Run: npm install react-linkedin-insight-tag
 
 # Usage
   
-
-`set_linkedin_insight=(partnerId,conversionId=0, subDomain='dc')`
+`.init(partnerId: any, subDomain: any)`
+`.track(conversionId: any, partnerId: any, subDomain: any)` 
   
 
 You just pass your partnerId and if you want, pass conversionId and subDomain.
