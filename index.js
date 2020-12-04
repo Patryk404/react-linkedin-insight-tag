@@ -34,13 +34,8 @@ export class LinkedInTag {
             
                 // It creates an element without actually adding it to the page DOM.
                 // The call is already made to the LinkedIn servers and will be registered.
-                const element = document.createElement('img');
-                element.alt = '';
-                element.height = 1;
-                element.width = 1;
-                element.src = url;
             
-                return element;
+                return url;
         }
 } 
 

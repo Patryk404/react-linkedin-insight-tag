@@ -20,7 +20,7 @@ import linkedinInsight from 'react-linkedin-insight-tag';
 
 function App() {
   linkedinInsight.init(34343,'dc')
-  const linkedincomponent=linkedinInsight.track();
+  const url=linkedinInsight.track(2000);
   return (
     <div className="App">
       <header className="App-header">
@@ -29,7 +29,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <div>
-        	<linkedincomponent/>
+          <img src={url} width='1' height='1' alt=''/>
         </div>
         <a
           className="App-link"
@@ -45,4 +45,4 @@ function App() {
 }
 
 export default App;
-}```
+```
