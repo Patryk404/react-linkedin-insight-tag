@@ -21,9 +21,6 @@ export class LinkedInTag {
         }
 
         track(conversionId, partnerId, subDomain) {
-                //if (this.disabled) return;
-                //if (!this.verifyInit()) return this.warn('You must call `init` before calling `track`.');
-            
                 partnerId = partnerId || this.partnerId || window._linkedin_data_partner_ids[0];
                 subDomain = subDomain || this.subDomain;
             
@@ -31,9 +28,6 @@ export class LinkedInTag {
                 if(conversionId) {
                   url = `${url}&conversionId=${conversionId}`;
                 }
-            
-                // It creates an element without actually adding it to the page DOM.
-                // The call is already made to the LinkedIn servers and will be registered.
             
                 return url;
         }
