@@ -9,9 +9,9 @@ Run: npm install react-linkedin-insight-tag
 `.init(partnerId: any, subDomain: any)`
 `.track(conversionId: any, partnerId: any, subDomain: any)` 
   
-
 You just pass your partnerId and if you want, pass conversionId and subDomain.
 
+## Example Use:
 
 ```javascript
 import logo from './logo.svg';
@@ -46,3 +46,7 @@ function App() {
 
 export default App;
 ```
+
+## Running Tests
+
+`npm test`
