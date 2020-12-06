@@ -5,7 +5,7 @@ export class LinkedInTag {
                 this.initialized = false;
         }
 
-        init(partnerId, subDomain){
+        init(partnerId, subDomain='dc'){
                 this.partnerId = partnerId;
                 this.subDomain = subDomain;
                 window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
@@ -20,7 +20,7 @@ export class LinkedInTag {
                 this.initialized = true;
         }
 
-        track(conversionId, partnerId, subDomain) {
+        track(conversionId, partnerId, subDomain='dc') {
                 partnerId = partnerId || this.partnerId || window._linkedin_data_partner_ids[0];
                 subDomain = subDomain || this.subDomain;
             
