@@ -5,6 +5,15 @@ export class LinkedInTag {
                 this.initialized = false;
         }
 
+        verifyInit() {
+                if (!this.initialized) {
+                  this.warn(
+                    'LinkedIn Insight Tag not initialized. Before using, call LinkedInTag.init with required params',
+                  );
+                }
+                return this.initialized;
+              }
+
         init(partnerId, subDomain='dc'){
                 this.partnerId = partnerId;
                 this.subDomain = subDomain;
@@ -21,6 +30,7 @@ export class LinkedInTag {
         }
 
         track(conversionId, partnerId, subDomain='dc') {
+                if (!this.verifyInit()) return this.warn('You must call `init` before calling `track`.');
                 partnerId = partnerId || this.partnerId || window._linkedin_data_partner_ids[0];
                 subDomain = subDomain || this.subDomain;
             
